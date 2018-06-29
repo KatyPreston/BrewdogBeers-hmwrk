@@ -1,0 +1,18 @@
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  text-decoration: underline;
+  font-size: 25px;
+  color: darkorange;
+}
+
+li {
+  font-size: 18px;
+  color: darkcyan;
+}
+
+p {
+  padding-bottom: 30px;
+}
