@@ -15,16 +15,21 @@ BeersView.prototype.bindEvents = function () {
 
 BeersView.prototype.populate = function (beers) {
   beers.forEach((beer, index) => {
-    const beerItem = this.createItem(beer.name, index);
+    const beerItem = this.createItem(beer.name, beer.tagline);
     this.container.appendChild(beerItem);
   });
 };
 
-BeersView.prototype.createItem = function (name, index) {
-  const item = document.createElement('li');
-  item.textContent = name;
-  item.value = index;
-  return item;
+BeersView.prototype.createItem = function (name, tagline) {
+  const itemList = document.createElement('ul');
+  itemList.textContent = name;
+
+  const tag = document.createElement('li');
+  tag.textContent = tagline;
+  itemList.appendChild(tag);
+
+
+  return itemList;
 };
 
 module.exports = BeersView;
