@@ -3,7 +3,6 @@ const PubSub = require("../helpers/pub_sub.js");
 const BeersView = function(container){
   this.container = container;
 };
-// listen to click, publish clicked beer id to beers
 
 BeersView.prototype.bindEvents = function () {
   PubSub.subscribe("Beers:all-beers-loaded", (event) => {
